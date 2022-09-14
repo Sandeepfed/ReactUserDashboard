@@ -10,9 +10,9 @@ import { useTranslation } from 'react-i18next';
 import axios from 'src/utils/axios';
 
 import ProfileCover from './ProfileCover';
-import RecentActivity from './RecentActivity';
-import Feed from './Feed';
-import PopularTags from './PopularTags';
+// import RecentActivity from './RecentActivity';
+// import Feed from './Feed';
+// import PopularTags from './PopularTags';
 import MyCards from './MyCards';
 import Addresses from './Addresses';
 import ActivityTab from './ActivityTab';
@@ -98,15 +98,15 @@ function ManagementUsersView() {
           <Grid item xs={12} md={12}>
             <ProfileCover user={user} />
           </Grid>
-          <Grid item xs={12} md={12}>
+          {/* <Grid item xs={12} md={12}>
             <RecentActivity />
-          </Grid>
-          <Grid item xs={12} md={8}>
+          </Grid> */}
+          {/* <Grid item xs={12} md={8}>
             <Feed />
-          </Grid>
-          <Grid item xs={12} md={4}>
+          </Grid> */}
+          {/* <Grid item xs={12} md={4}>
             <PopularTags />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} md={7}>
             <MyCards />
           </Grid>

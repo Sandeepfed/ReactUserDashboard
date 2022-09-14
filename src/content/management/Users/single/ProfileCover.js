@@ -5,7 +5,7 @@ import {
   Box,
   Typography,
   Card,
-  Tooltip,
+ 
   Avatar,
   Grid,
   Button,
@@ -13,13 +13,14 @@ import {
   styled
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
+// import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
 // import ArrowForwardTwoToneIcon from '@mui/icons-material/ArrowForwardTwoTone';
-import { useNavigate, useLocation } from 'react-router-dom';
+// import { useNavigate, useLocation } from 'react-router-dom';
 import UploadTwoToneIcon from '@mui/icons-material/UploadTwoTone';
 // import MoreHorizTwoToneIcon from '@mui/icons-material/MoreHorizTwoTone';
+import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+// import ListItem from '@mui/material/ListItem';
 
 
 
@@ -33,13 +34,14 @@ const AvatarWrapper = styled(Card)(
     position: relative;
     overflow: visible;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
 
     margin-left: ${theme.spacing(2)};
 
     .MuiAvatar-root {
-      width: ${theme.spacing(16)};
-      height: ${theme.spacing(16)};
+      width:80px;
+      height: 80px;
+     
     }
 `
 );
@@ -49,8 +51,8 @@ const ButtonUploadWrapper = styled(Box)(
     position: absolute;
     width: ${theme.spacing(2)};
     height: ${theme.spacing()};
-    bottom: -${theme.spacing(1)};
-    right: -${theme.spacing(1)};
+    bottom: 20px;
+    right: 6px;
     border-radius: 100%;
 
 
@@ -58,10 +60,11 @@ const ButtonUploadWrapper = styled(Box)(
       border-radius: 100%;
       background: ${theme.colors.primary.main};
       color: ${theme.palette.primary.contrastText};
-      box-shadow: ${theme.colors.shadows.primary};
+      box-shadow:inherit;
       width: ${theme.spacing(4)};
       height: ${theme.spacing(4)};
       padding: 0;
+      border-radius:30px;
   
       &:hover {
         background: ${theme.colors.primary.dark};
@@ -80,6 +83,16 @@ const CardCover = styled(Card)(
     `
 );
 
+const Typographys = styled(Card)(
+  ({ theme }) => `
+    position: relative;
+
+    .typo {
+      height: ${theme.spacing(26)};
+    }
+    `
+);
+
 const CardCoverAction = styled(Box)(
   ({ theme }) => `
     position: absolute;
@@ -90,19 +103,19 @@ const CardCoverAction = styled(Box)(
 
 const ProfileCover = ({ user }) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
-  const handleBack = () => {
-    return navigate(
-      `/${location.pathname.split('/')[1]}/management/users/list`
-    );
-  };
+  // const handleBack = () => {
+  //   return navigate(
+  //     `/${location.pathname.split('/')[1]}/management/users/list`
+  //   );
+  // };
 
   return (
     <>
-      <Box display="flex" mb={3}>
-        <Tooltip arrow placement="top" title={t('Go back')}>
+      <Box display="flex" mb={3} p={2} px={2}>
+        {/* <Tooltip arrow placement="top" title={t('Go back')}>
           <IconButton
             onClick={handleBack}
             color="primary"
@@ -113,7 +126,7 @@ const ProfileCover = ({ user }) => {
           >
             <ArrowBackTwoToneIcon />
           </IconButton>
-        </Tooltip>
+        </Tooltip> */}
         <Box>
           <Typography variant="h3" component="h3" gutterBottom>
             {t('Personal Information')} 
@@ -126,9 +139,9 @@ const ProfileCover = ({ user }) => {
       <Card px={4} py={4} display="flex" alignItems="flex-start">
       <Grid container spacing={2}>
       
-  <Grid item xs={2} >
+  <Grid item xs={1} >
 
-  <CardCover mb={3}>
+    <CardCover mb={3}>
        {/* <CardMedia image={user.coverImg} /> */}
         <CardCoverAction>
           <Input accept="image/*" id="change-cover" multiple type="file" />
@@ -160,34 +173,38 @@ const ProfileCover = ({ user }) => {
         </ButtonUploadWrapper>
       </AvatarWrapper>
   </Grid>
-  <Grid item xs={10}>
-   <Box
-          display={{ xs: 'block', md: 'flex' }}
-          alignItems="center"
-          justifyContent="space-between"
-        >
+  <Grid item xs={11}>
+       
     
    
-      <Box py={2} pl={2} mb={3}>
-        <Typography gutterBottom variant="h4">
+      <Box p={2} mb={1}>
+        <List sx={{ bgcolor: 'background.paper', padding: '0', margin:'0', display: 'flex', justifyContent:'space-between' }}>
+        <Typography gutterBottom variant="h4 " Typographys = {Typographys}>
           {user.name}
         </Typography>
-         <Typography variant="subtitle2">Member ID :	PCM399 | Email :	sandeep.powercozmo@gmail.com | Role :	seller | Mobile :	+91 8219370306  </Typography>
-         <List sx={{ bgcolor: 'background.paper', padding: '0' }}>
+        <Typography gutterBottom variant="h4">
+        <span className="member" sx={{ display: 'flex', justifyContent:'space-between' }} ><EmojiFlagsIcon/> India</span>
+        </Typography>
+        </List>
+        <Typography variant="subtitle2">  <span className="member"> Member ID :PCM399 </span>  |  <span className="member"> Email : sandeep.powercozmo@gmail.com </span>  |  <span className="member"> Role :	seller </span>  | <span className="member"> Mobile : +91 8219370306  </span></Typography> 
+         {/* <Typography variant="subtitle2">| | Role :	seller | </Typography> */}
+         {/* <List sx={{ bgcolor: 'background.paper', padding: '0', display: 'flex'  }}>
          <ListItem alignItems="flex-start">
-          Member ID :	PCM399 
+          <span className="member">Member ID :</span> <br/>
+          PCM399 
         </ListItem>
          <ListItem alignItems="flex-start">
-         Member ID :	PCM399 
+         <span className="member">Email :	</span> <br/>sandeep.powercozmo@gmail.com 
          </ListItem>
 
         <ListItem alignItems="flex-start">
-         Member ID :	PCM399 
+        <span className="member">Role :	seller </span>
+        </ListItem>
+        <ListItem alignItems="flex-start">
+        <span className="member"> Mobile : +91 8219370306  </span>
         </ListItem>
 
-
-
-        </List>
+        </List> */}
         {/* <Typography
          
           variant="subtitle2"
@@ -195,27 +212,9 @@ const ProfileCover = ({ user }) => {
         >
           {user.jobtitle} | {user.location} | {user.followers} {t('followers')}
         </Typography> */}
-        </Box>
-        <Box
-          display={{ xs: 'block', md: 'flex' }}
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Box>
-           
-            <Button
-              size="small"
-              sx={{
-                mx: 1
-              }}
-              variant="outlined"
-            >
-              {t('View website')}
-            </Button>
-           
-          </Box>
+      
+    
      
-        </Box>
       </Box>
   </Grid>
  

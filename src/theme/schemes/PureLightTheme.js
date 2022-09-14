@@ -52,10 +52,10 @@ const colors = {
   },
   layout: {
     general: {
-      bodyBg: '#f2f5f9'
+      bodyBg: '#ffff'
     },
     sidebar: {
-      background: themeColors.white,
+      background:'#000',
       textColor: themeColors.secondary,
       dividerBg: '#f2f5f9',
       menuItemColor: '#242E6F',
@@ -329,7 +329,7 @@ export const PureLightTheme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: alpha(darken(themeColors.primaryAlt, 0.4), 0.2),
-          backdropFilter: 'blur(2px)',
+          backdropFilter: 'blur(0)',
 
           '&.MuiBackdrop-invisible': {
             backgroundColor: 'transparent',
