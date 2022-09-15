@@ -91,6 +91,7 @@ const menuItems = [
     ]
   },
   {
+    heading: 'For Seller ',
     items: [
       {
         name: 'Products ',

@@ -54,7 +54,7 @@ const SubMenuWrapper = styled(Box)(
           background-color: transparent;
           width: 100%;
           justify-content: flex-start;
-          padding: ${theme.spacing(1, 3)};
+          padding: ${theme.spacing(0.6, 3)};
           font-weight:500;
           font-size: ${theme.typography.pxToRem(14)};
 

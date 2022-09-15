@@ -73,7 +73,7 @@ const LogoSignInner = styled(Box)(
 
 const LogoTextWrapper = styled(Box)(
   ({ theme }) => `
-        padding-left: ${theme.spacing(1)};
+        padding-left: ${theme.spacing(2)};
 `
 );
 
