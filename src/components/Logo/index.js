@@ -117,7 +117,7 @@ function Logo() {
           <Tooltip title={t('Version') + ' 3.1'} arrow placement="right">
             <VersionBadge>3.1</VersionBadge>
           </Tooltip>
-          <LogoText>Tokyo</LogoText>
+          <LogoText>Powercozmo</LogoText>
         </LogoTextWrapper>
       </Box>
     </LogoWrapper>

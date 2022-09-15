@@ -59,13 +59,14 @@ const UserAvatar = styled(Avatar)(
 
 const MenuListWrapperPrimary = styled(MenuList)(
   ({ theme }) => `
-  padding: ${theme.spacing(2)};
+  padding: ${theme.spacing(4)};
 
   & .MuiMenuItem-root {
       border-radius: 50px;
       padding: ${theme.spacing(1, 1, 1, 2.5)};
       min-width: 200px;
       margin-bottom: 2px;
+      
       position: relative;
       color: ${theme.colors.alpha.black[100]};
 
@@ -229,9 +230,11 @@ function HeaderUserbox() {
       >
         <MenuUserBox
           sx={{
-            minWidth: 210
+            minWidth: 210,
+          
           }}
           display="flex"
+          
         >
           <Avatar variant="rounded" alt={user.name} src={user.avatar} />
           <UserBoxText>

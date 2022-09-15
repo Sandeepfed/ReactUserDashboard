@@ -110,8 +110,8 @@ function SidebarTopSection() {
           flex={1}
           alignItems="center"
           justifyContent="space-between"
-        >
-          <UserBoxText>
+        > 
+        <UserBoxText>
             <UserBoxLabel variant="body1">{user.name}</UserBoxLabel>
             <UserBoxDescription variant="body2">
               {user.jobtitle}

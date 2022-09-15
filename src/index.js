@@ -3,7 +3,6 @@ import 'src/mocks';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollTop from 'src/hooks/useScrollTop';
-
 import 'nprogress/nprogress.css';
 import { Provider } from 'react-redux';
 import store from 'src/store';

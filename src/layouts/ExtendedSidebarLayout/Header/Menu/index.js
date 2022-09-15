@@ -18,7 +18,7 @@ import {
   styled
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
+// import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
 import ChevronRightTwoToneIcon from '@mui/icons-material/ChevronRightTwoTone';
 import Text from 'src/components/Text';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
@@ -83,6 +83,9 @@ const MenuListWrapperSecondary = styled(MenuList)(
 const MenuListWrapperSuccess = styled(MenuList)(
   ({ theme }) => `
   padding: ${theme.spacing(3)};
+  MuiListSubheader-root{
+    font-size:20px;
+  }
 
   & .MuiMenuItem-root {
       border-radius: 50px;
@@ -149,9 +152,9 @@ function HeaderMenu() {
   const ref = useRef(null);
   const [isOpen, setOpen] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = () => {
     setOpen(false);
@@ -160,9 +163,9 @@ function HeaderMenu() {
   const ref2 = useRef(null);
   const [isOpen2, setOpen2] = useState(false);
 
-  const handleOpen2 = () => {
-    setOpen2(true);
-  };
+  // const handleOpen2 = () => {
+  //   setOpen2(true);
+  // };
 
   const handleClose2 = () => {
     setOpen2(false);
@@ -170,12 +173,12 @@ function HeaderMenu() {
 
   return (
     <>
-      <Box
+      {/* <Box
         sx={{
           display: { xs: 'none', md: 'inline-flex' }
         }}
-      >
-        <Button
+      > */}
+        {/* <Button
           ref={ref}
           onClick={handleOpen}
           endIcon={<KeyboardArrowDownTwoToneIcon />}
@@ -207,8 +210,8 @@ function HeaderMenu() {
           }}
         >
           {t('Mega menu')}
-        </Button>
-        <Button
+        </Button> */}
+        {/* <Button
           ref={ref2}
           onClick={handleOpen2}
           endIcon={<KeyboardArrowDownTwoToneIcon />}
@@ -239,8 +242,8 @@ function HeaderMenu() {
           }}
         >
           {t('Dashboards')}
-        </Button>
-      </Box>
+        </Button> */}
+      {/* </Box> */}
       <Popover
         disableScrollLock
         anchorEl={ref.current}

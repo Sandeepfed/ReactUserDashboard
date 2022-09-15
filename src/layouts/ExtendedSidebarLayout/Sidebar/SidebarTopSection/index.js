@@ -31,34 +31,34 @@ const MenuUserBox = styled(Box)(
 `
 );
 
-const UserBoxText = styled(Box)(
-  ({ theme }) => `
-    text-align: left;
-    padding-left: ${theme.spacing(1)};
-`
-);
+// const UserBoxText = styled(Box)(
+//   ({ theme }) => `
+//     text-align: left;
+//     padding-left: ${theme.spacing(1)};
+// `
+// );
 
-const UserBoxLabel = styled(Typography)(
-  ({ theme }) => `
-    font-weight: ${theme.typography.fontWeightBold};
-    color: ${theme.sidebar.menuItemColor};
-    display: block;
+// const UserBoxLabel = styled(Typography)(
+//   ({ theme }) => `
+//     font-weight: ${theme.typography.fontWeightBold};
+//     color: ${theme.sidebar.menuItemColor};
+//     display: block;
 
-    &.popoverTypo {
-      color: ${theme.palette.secondary.main};
-    }
-`
-);
+//     &.popoverTypo {
+//       color: ${theme.palette.secondary.main};
+//     }
+// `
+// );
 
-const UserBoxDescription = styled(Typography)(
-  ({ theme }) => `
-    color: ${alpha(theme.sidebar.menuItemColor, 0.6)};
+// const UserBoxDescription = styled(Typography)(
+//   ({ theme }) => `
+//     color: ${alpha(theme.sidebar.menuItemColor, 0.6)};
 
-    &.popoverTypo {
-      color: ${theme.palette.secondary.light};
-    }
-`
-);
+//     &.popoverTypo {
+//       color: ${theme.palette.secondary.light};
+//     }
+// `
+// );
 
 function SidebarTopSection() {
   const { t } = useTranslation();
@@ -168,14 +168,14 @@ function SidebarTopSection() {
           display="flex"
         >
           {/* <Avatar variant="rounded" alt={user.name} src={user.avatar} /> */}
-          <UserBoxText>
+          {/* <UserBoxText>
             <UserBoxLabel className="popoverTypo" variant="body1">
               {user.name}
             </UserBoxLabel>
             <UserBoxDescription className="popoverTypo" variant="body2">
               {user.jobtitle}
             </UserBoxDescription>
-          </UserBoxText>
+          </UserBoxText> */}
         </MenuUserBox>
         <Divider
           sx={{

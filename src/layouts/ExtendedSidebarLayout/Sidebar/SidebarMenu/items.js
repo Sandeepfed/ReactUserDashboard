@@ -1,392 +1,295 @@
-import AnalyticsTwoToneIcon from '@mui/icons-material/AnalyticsTwoTone';
-import HealthAndSafetyTwoToneIcon from '@mui/icons-material/HealthAndSafetyTwoTone';
-import AssignmentIndTwoToneIcon from '@mui/icons-material/AssignmentIndTwoTone';
-import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
-import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
-import VpnKeyTwoToneIcon from '@mui/icons-material/VpnKeyTwoTone';
-import ErrorTwoToneIcon from '@mui/icons-material/ErrorTwoTone';
-import DesignServicesTwoToneIcon from '@mui/icons-material/DesignServicesTwoTone';
-import SupportTwoToneIcon from '@mui/icons-material/SupportTwoTone';
-import ReceiptTwoToneIcon from '@mui/icons-material/ReceiptTwoTone';
-import BackupTableTwoToneIcon from '@mui/icons-material/BackupTableTwoTone';
-import SmartToyTwoToneIcon from '@mui/icons-material/SmartToyTwoTone';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import HelpCenterOutlinedIcon from '@mui/icons-material/HelpCenterOutlined';
+import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
+import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
+import InsightsOutlinedIcon from '@mui/icons-material/InsightsOutlined';
+import LowPriorityOutlinedIcon from '@mui/icons-material/LowPriorityOutlined';
+import ModeOfTravelOutlinedIcon from '@mui/icons-material/ModeOfTravelOutlined';
+import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
+import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
+import ManageHistoryOutlinedIcon from '@mui/icons-material/ManageHistoryOutlined';
+import RowingOutlinedIcon from '@mui/icons-material/RowingOutlined';
+import PermDataSettingOutlinedIcon from '@mui/icons-material/PermDataSettingOutlined';
+
 
 const menuItems = [
   {
-    heading: 'General',
     items: [
       {
-        name: 'Blueprints',
-        icon: BackupTableTwoToneIcon,
-        link: '',
-        items: [
-          {
-            name: 'Extended sidebar',
-            link: '/extended-sidebar/dashboards',
-            badge: 'v3.0',
-            badgeTooltip: 'Added in version 3.0'
-          },
-          {
-            name: 'Accent header',
-            link: '/accent-header/dashboards',
-            badge: '',
-            badgeTooltip: 'Updated'
-          },
-          {
-            name: 'Accent sidebar',
-            link: '/accent-sidebar/dashboards'
-          },
-          {
-            name: 'Boxed sidebar',
-            link: '/boxed-sidebar/dashboards'
-          },
-          {
-            name: 'Collapsed sidebar',
-            link: '/collapsed-sidebar/dashboards'
-          },
-          {
-            name: 'Bottom navigation',
-            link: '/bottom-navigation/dashboards'
-          },
-          {
-            name: 'Top navigation',
-            link: '/top-navigation/dashboards'
-          }
-        ]
-      },
+        name: 'Dashboard',
+        icon: DashboardCustomizeOutlinedIcon,
+        link: '/dashboard',
+      
+    },
       {
-        name: 'Dashboards',
-        icon: SmartToyTwoToneIcon,
-        link: '/extended-sidebar/dashboards',
+        name: 'Profile ',
+        icon: AssignmentIndOutlinedIcon,
+        link: '/accent-header/dashboards',
         items: [
           {
-            name: 'Reports',
-            link: 'dashboards/reports',
+            name: 'Personal Profile  ',
+            link: 'management/users/single/1',
             badge: '',
             badgeTooltip: 'Dot indicator with example tooltip'
           },
           {
-            name: 'Expenses',
+            name: 'Company Profile  ',
             link: 'dashboards/expenses',
             badge: ''
           },
-          {
-            name: 'Products',
-            link: 'dashboards/products'
-          },
-          {
-            name: 'Statistics',
-            link: 'dashboards/statistics'
-          },
-          {
-            name: 'Automation',
-            link: 'dashboards/automation'
-          },
-          {
-            name: 'Analytics',
-            link: 'dashboards/analytics'
-          },
-          {
-            name: 'Banking',
-            link: 'dashboards/banking'
-          },
-          {
-            name: 'Commerce',
-            link: 'dashboards/commerce'
-          },
-          {
-            name: 'Crypto',
-            link: 'dashboards/crypto'
-          },
-          {
-            name: 'Finance',
-            link: 'dashboards/finance'
-          },
-          {
-            name: 'Fitness',
-            link: 'dashboards/fitness'
-          },
-          {
-            name: 'Healthcare',
-            link: '/extended-sidebar/dashboards/healthcare',
-            items: [
-              {
-                name: 'Doctors',
-                link: 'dashboards/healthcare/doctor'
-              },
-              {
-                name: 'Hospital',
-                link: 'dashboards/healthcare/hospital'
-              }
-            ]
-          },
-          {
-            name: 'Helpdesk',
-            link: 'dashboards/helpdesk'
-          },
-          {
-            name: 'Learning',
-            link: 'dashboards/learning'
-          },
-          {
-            name: 'Monitoring',
-            link: 'dashboards/monitoring'
-          },
-          {
-            name: 'Tasks',
-            link: 'dashboards/tasks'
-          }
         ]
       },
       {
-        name: 'Data Display',
-        icon: HealthAndSafetyTwoToneIcon,
+        name: 'Enquiry Center',
+        icon: HelpCenterOutlinedIcon,
         badge: '',
         badgeTooltip: 'Tokyo contains over 250 data display blocks',
-        link: '/extended-sidebar/blocks',
-        items: [
-          {
-            name: 'Charts large',
-            link: 'blocks/charts-large'
-          },
-          {
-            name: 'Charts small',
-            link: 'blocks/charts-small'
-          },
-          {
-            name: 'Composed cards',
-            link: 'blocks/composed-cards'
-          },
-          {
-            name: 'Grids',
-            link: 'blocks/grids'
-          },
-          {
-            name: 'Icon cards',
-            link: 'blocks/icon-cards'
-          },
-          {
-            name: 'Image cards',
-            link: 'blocks/image-cards'
-          },
-          {
-            name: 'Lists large',
-            link: 'blocks/lists-large'
-          },
-          {
-            name: 'Lists small',
-            link: 'blocks/lists-small'
-          },
-          {
-            name: 'Navigation',
-            link: 'blocks/navigation'
-          },
-          {
-            name: 'Profile cards',
-            link: 'blocks/profile-cards'
-          },
-          {
-            name: 'Progress circular',
-            link: 'blocks/progress-circular'
-          },
-          {
-            name: 'Progress horizontal',
-            link: 'blocks/progress-horizontal'
-          },
-          {
-            name: 'Sparklines large',
-            link: 'blocks/sparklines-large'
-          },
-          {
-            name: 'Sparklines small',
-            link: 'blocks/sparklines-small'
-          },
-          {
-            name: 'Statistics',
-            link: 'blocks/statistics'
-          }
-        ]
+        link: '/accent-header/blocks',
+        
       },
       {
-        name: 'Applications',
-        icon: AnalyticsTwoToneIcon,
-        link: '/extended-sidebar/applications',
+        name: 'RFQS ',
+        icon: InsightsOutlinedIcon,
+        link: '/accent-header/applications',
         items: [
           {
-            name: 'Calendar',
+            name: 'RFQ List',
             link: 'applications/calendar'
           },
           {
-            name: 'File Manager',
+            name: 'Create RFQ ',
             link: 'applications/file-manager'
           },
           {
-            name: 'Jobs Platform',
+            name: 'Received Quotes  ',
             link: 'applications/jobs-platform'
-          },
-          {
-            name: 'Mailbox',
-            link: 'applications/mailbox/inbox'
-          },
-          {
-            name: 'Messenger',
-            link: 'applications/messenger'
-          },
-          {
-            name: 'Projects Board',
-            link: 'applications/projects-board'
           }
+        
         ]
       }
     ]
   },
   {
-    heading: 'Management',
+    // heading: 'Management',
     items: [
       {
-        name: 'Users',
-        icon: AssignmentIndTwoToneIcon,
-        link: '/extended-sidebar/management/users',
+        name: 'Orders and Invoices',
+        icon: LowPriorityOutlinedIcon,
+        link: '/accent-header/management/users',
         items: [
           {
-            name: 'List',
+            name: 'Orders List  ',
             link: 'management/users/list'
           },
           {
-            name: 'User Profile',
+            name: 'Invoices',
             link: 'management/users/single'
           }
         ]
       },
-      {
-        name: 'Projects',
-        icon: AccountTreeTwoToneIcon,
-        link: '/extended-sidebar/management/projects/list'
-      },
-      {
-        name: 'Commerce',
-        icon: StorefrontTwoToneIcon,
-        link: '/extended-sidebar/management/commerce',
-        items: [
-          {
-            name: 'Shop',
-            link: 'management/commerce/shop'
-          },
-          {
-            name: 'List',
-            link: 'management/commerce/products/list'
-          },
-          {
-            name: 'Details',
-            link: 'management/commerce/products/single/1'
-          },
-          {
-            name: 'Create',
-            link: 'management/commerce/products/create'
-          }
-        ]
-      },
-      {
-        name: 'Invoices',
-        icon: ReceiptTwoToneIcon,
-        link: '/extended-sidebar/management/invoices',
-        items: [
-          {
-            name: 'List',
-            link: 'management/invoices/list'
-          },
-          {
-            name: 'Details',
-            link: 'management/invoices/single'
-          }
-        ]
-      }
+    
     ]
   },
   {
-    heading: 'Extra Pages',
     items: [
       {
-        name: 'Auth Pages',
-        icon: VpnKeyTwoToneIcon,
+        name: 'Products ',
+        icon: CategoryOutlinedIcon,
         link: '/auth',
         items: [
+            {
+              name: 'Products List',
+              link: '/account/recover-password'
+            },
+         
           {
-            name: 'Login',
-            items: [
-              {
-                name: 'Basic',
-                link: '/account/login-basic'
-              },
-              {
-                name: 'Cover',
-                link: '/account/login-cover'
-              }
-            ]
+            name: 'Add New Product ',
+            link: '/account/recover-password'
           },
           {
-            name: 'Register',
-            items: [
-              {
-                name: 'Basic',
-                link: '/account/register-basic'
-              },
-              {
-                name: 'Cover',
-                link: '/account/register-cover'
-              },
-              {
-                name: 'Wizard',
-                link: '/account/register-wizard'
-              }
-            ]
+            name: 'Add Catalog Products ',
+            link: '/account/recover-password'
           },
           {
-            name: 'Recover Password',
+            name: 'Expired and disapproved ',
+            link: '/account/recover-password'
+          },
+          {
+            name: 'Draft Product',
             link: '/account/recover-password'
           }
         ]
-      },
+      }
+   
+    ]
+  },
+  {
+   items: [
       {
-        name: 'Status',
-        icon: ErrorTwoToneIcon,
-        link: '/status',
+        name: 'Quotations',
+        icon: ModeOfTravelOutlinedIcon,
+        link: '/auth',
         items: [
+            {
+              name: 'Create Quote',
+              link: '/account/recover-password'
+            },
+         
           {
-            name: 'Error 404',
-            link: '/status/404'
+            name: 'Quote List   ',
+            link: '/account/recover-password'
           },
           {
-            name: 'Error 500',
-            link: '/status/500'
-          },
-          {
-            name: 'Maintenance',
-            link: '/status/maintenance'
-          },
-          {
-            name: 'Coming Soon',
-            link: '/status/coming-soon'
+            name: 'Quotation Settings  ',
+            link: '/account/recover-password'
           }
+         
         ]
       }
     ]
   },
   {
-    heading: 'Foundation',
     items: [
-      {
-        name: 'Overview',
-        link: '/overview',
-        icon: DesignServicesTwoToneIcon
-      },
-      {
-        name: 'Documentation',
-        icon: SupportTwoToneIcon,
-        link: '/docs'
-      }
-    ]
-  }
+       {
+         name: 'Seller Tools ',
+         icon: HandymanOutlinedIcon,
+         link: '/auth',
+         items: [
+             {
+               name: 'Attributes Definition',
+               link: '/account/recover-password'
+             },
+          
+           {
+             name: 'Categories',
+             link: '/account/recover-password'
+           },
+           {
+             name: 'Brands ',
+             link: '/account/recover-password'
+           },
+           {
+            name: 'Keywords',
+            link: '/account/recover-password'
+          }
+          
+         ]
+       }
+     ]
+   },
+  
+   {
+    items: [
+       {
+         name: 'Pricing Settings ',
+         icon: MonetizationOnOutlinedIcon,
+         link: '/auth',
+         items: [
+             {
+               name: 'Pricing Settings',
+               link: '/account/recover-password'
+             },
+          
+           {
+             name: 'Discount Levels',
+             link: '/account/recover-password'
+           },
+           
+          
+         ]
+       }
+     ]
+   },
+   {
+    items: [
+       {
+         name: 'Company Site Settings',
+         icon:  ManageHistoryOutlinedIcon,
+         link: '/auth',
+         items: [
+             {
+               name: 'Searches ',
+               link: '/account/recover-password'
+             },
+          
+           {
+             name: 'Viewed Products ',
+             link: '/account/recover-password'
+           },
+           {
+             name: 'Viewed Suppliers',
+             link: '/account/recover-password'
+           }
+                     
+         ]
+       }
+     ]
+   },
+   {
+    items: [
+       {
+         name: 'Settings',
+         icon: PermDataSettingOutlinedIcon,
+         link: '/auth',
+         items: [
+             {
+               name: 'Alerts Preferences ',
+               link: '/account/recover-password'
+             },
+          
+           {
+             name: 'Email Preferences',
+             link: '/account/recover-password'
+           },
+           {
+             name: 'Privacy Settings ',
+             link: '/account/recover-password'
+           }
+                     
+         ]
+       }
+     ]
+   },
+   {
+    items: [
+       {
+         name: 'Recent Activity ',
+         icon: RowingOutlinedIcon,
+         link: '/auth',
+         items: [
+             {
+               name: 'Company Details',
+               link: '/account/recover-password'
+             },
+          
+           {
+             name: 'Your Site Domain',
+             link: '/account/recover-password'
+           },
+           {
+             name: 'BranSellers Sub Accounts',
+             link: '/account/recover-password'
+           }
+                     
+         ]
+       }
+     ]
+   },
+  // {
+  //   heading: 'Foundation',
+  //   items: [
+  //     {
+  //       name: 'Overview',
+  //       link: '/overview',
+  //       icon: DesignServicesTwoToneIcon
+  //     },
+  //     {
+  //       name: 'Documentation',
+  //       icon: SupportTwoToneIcon,
+  //       link: '/docs'
+  //     }
+  //   ]
+  // }
 ];
 
 export default menuItems;

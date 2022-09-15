@@ -85,6 +85,7 @@ const BoxComposedBg = styled(Box)(
   z-index: 6;
   height: 100%;
   width: 100%;
+  right:10px;
   border-radius: inherit;
 `
 );
@@ -150,6 +151,7 @@ const IconButtonWrapper = styled(IconButton)(
   ({ theme }) => `
   width: ${theme.spacing(4)};
   height: ${theme.spacing(4)};
+  margin-right:15px;
   border-radius: ${theme.general.borderRadiusLg};
 `
 );

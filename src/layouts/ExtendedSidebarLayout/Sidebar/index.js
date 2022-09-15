@@ -13,9 +13,9 @@ import {
   darken
 } from '@mui/material';
 
-import SidebarTopSection from './SidebarTopSection';
+// import SidebarTopSection from './SidebarTopSection';
 import SidebarMenu from './SidebarMenu';
-import SidebarFooter from './SidebarFooter';
+// import SidebarFooter from './SidebarFooter';
 import Logo from 'src/components/LogoSign';
 
 const SidebarWrapper = styled(Box)(
@@ -47,11 +47,11 @@ function Sidebar() {
           left: 0,
           top: 0,
           background:
-            theme.palette.mode === 'dark'
+            theme.palette.mode === 'light'
               ? alpha(lighten(theme.header.background, 0.1), 0.5)
-              : darken(theme.colors.alpha.black[100], 0.5),
+              : darken(theme.colors.alpha.black[100]),
           boxShadow:
-            theme.palette.mode === 'dark' ? theme.sidebar.boxShadow : 'none'
+             theme.palette.mode === 'light' ? theme.sidebar.boxShadow : 'none'
         }}
       >
         <Scrollbar>
@@ -65,21 +65,21 @@ function Sidebar() {
               <Logo />
             </Box>
           </Box>
-          <Divider
+          {/* <Divider
             sx={{
               my: theme.spacing(3),
               mx: theme.spacing(2),
               background: theme.colors.alpha.trueWhite[10]
             }}
-          />
-          <SidebarTopSection />
-          <Divider
+          /> */}
+          {/* <SidebarTopSection /> */}
+          {/* <Divider
             sx={{
               my: theme.spacing(3),
               mx: theme.spacing(2),
               background: theme.colors.alpha.trueWhite[10]
             }}
-          />
+          /> */}
           <SidebarMenu />
         </Scrollbar>
         <Divider
@@ -87,7 +87,7 @@ function Sidebar() {
             background: theme.colors.alpha.trueWhite[10]
           }}
         />
-        <SidebarFooter />
+        {/* <SidebarFooter /> */}
       </SidebarWrapper>
       <Drawer
         sx={{
@@ -102,10 +102,10 @@ function Sidebar() {
         <SidebarWrapper
           sx={{
             background:
-              theme.palette.mode === 'dark'
-                ? theme.colors.alpha.white[100]
+                theme.palette.mode === 'light'
+                ? theme.colors.alpha.black[100]
                 : darken(theme.colors.alpha.black[100], 0.5)
-          }}
+            }}
         >
           <Scrollbar>
             <Box mt={3}>
@@ -122,20 +122,20 @@ function Sidebar() {
               sx={{
                 my: theme.spacing(3),
                 mx: theme.spacing(2),
-                background: theme.colors.alpha.trueWhite[10]
+                background: theme.colors.alpha.black[10]
               }}
             />
-            <SidebarTopSection />
+            {/* <SidebarTopSection /> */}
             <Divider
               sx={{
                 my: theme.spacing(3),
                 mx: theme.spacing(2),
-                background: theme.colors.alpha.trueWhite[10]
+                background: theme.colors.alpha.black[10]
               }}
             />
             <SidebarMenu />
           </Scrollbar>
-          <SidebarFooter />
+          {/* <SidebarFooter /> */}
         </SidebarWrapper>
       </Drawer>
     </>

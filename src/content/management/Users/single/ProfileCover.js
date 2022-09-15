@@ -5,7 +5,6 @@ import {
   Box,
   Typography,
   Card,
- 
   Avatar,
   Grid,
   Button,
@@ -21,6 +20,7 @@ import UploadTwoToneIcon from '@mui/icons-material/UploadTwoTone';
 import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
 import List from '@mui/material/List';
 // import ListItem from '@mui/material/ListItem';
+
 
 
 
@@ -156,6 +156,23 @@ const ProfileCover = ({ user }) => {
           </label>
         </CardCoverAction>
       </CardCover>
+      {/* <CardHeader
+        avatar={<Avatar src="/static/images/avatars/5.jpg" />}
+        action={
+          <IconButton color="primary">
+            <MoreHorizTwoToneIcon />
+          </IconButton>
+        }
+        titleTypographyProps={{ variant: 'h4' }}
+        subheaderTypographyProps={{ variant: 'subtitle2' }}
+        title="Allison Lipshutz"
+        subheader={
+          <>
+            Managing Partner, <Link href="#">#software</Link>,{' '}
+            <Link href="#">#managers</Link>, Google Inc.
+          </>
+        }
+      /> */}
       <AvatarWrapper>
         <Avatar variant="rounded" alt={user.name} src={user.avatar} />
         <ButtonUploadWrapper>

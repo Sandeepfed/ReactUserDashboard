@@ -16,12 +16,12 @@ const ExtendedSidebarLayout = () => {
 
         '.MuiPageTitle-wrapper': {
           background:
-            theme.palette.mode === 'dark'
-              ? theme.colors.alpha.trueWhite[5]
-              : theme.colors.alpha.white[50],
+            theme.palette.mode === 'light'
+              ? theme.colors.alpha.white[100]
+              : theme.colors.alpha.black[100],
           marginBottom: `${theme.spacing(4)}`,
           boxShadow:
-            theme.palette.mode === 'dark'
+            theme.palette.mode === 'light'
               ? `0 1px 0 ${alpha(
                   lighten(theme.colors.primary.main, 0.7),
                   0.15

@@ -4,7 +4,7 @@ import '@mui/lab/themeAugmentation';
 // import i18n from 'src/i18n/i18n';
 
 const themeColors = {
-  primary: '#5569ff',
+  primary: '#eb4972',
   secondary: '#6E759F',
   success: '#57CA22',
   warning: '#FFA319',
@@ -12,7 +12,8 @@ const themeColors = {
   info: '#33C2FF',
   black: '#223354',
   white: '#ffffff',
-  primaryAlt: '#000C57'
+  primaryAlt: '#000C57',
+  Lightred:'#eb4972'
 };
 
 const colors = {
@@ -52,10 +53,10 @@ const colors = {
   },
   layout: {
     general: {
-      bodyBg: '#ffff'
+      bodyBg:  themeColors.white,
     },
     sidebar: {
-      background:'#000',
+      background:themeColors.white,
       textColor: themeColors.secondary,
       dividerBg: '#f2f5f9',
       menuItemColor: '#242E6F',
@@ -91,6 +92,14 @@ const colors = {
       50: alpha(themeColors.black, 0.5),
       70: alpha(themeColors.black, 0.7),
       100: themeColors.black
+    },
+    Lightred: {
+      5: alpha(themeColors.Lightred, 0.02),
+      10: alpha(themeColors.Lightred, 0.1),
+      30: alpha(themeColors.Lightred, 0.3),
+      50: alpha(themeColors.Lightred, 0.5),
+      70: alpha(themeColors.Lightred, 0.7),
+      100: themeColors.Lightred
     }
   },
   secondary: {
@@ -183,6 +192,14 @@ export const PureLightTheme = createTheme({
         50: alpha(themeColors.black, 0.5),
         70: alpha(themeColors.black, 0.7),
         100: themeColors.black
+      },
+      Lightred: {
+        5: alpha(themeColors.Lightred, 0.02),
+        10: alpha(themeColors.Lightred, 0.1),
+        30: alpha(themeColors.Lightred, 0.3),
+        50: alpha(themeColors.Lightred, 0.5),
+        70: alpha(themeColors.Lightred, 0.7),
+        100: themeColors.Lightred
       }
     },
     secondary: {
@@ -1160,7 +1177,7 @@ export const PureLightTheme = createTheme({
   },
   typography: {
     fontFamily:
-      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+      '"Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     h1: {
       fontWeight: 700,
       fontSize: 35

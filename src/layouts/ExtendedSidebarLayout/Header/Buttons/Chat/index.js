@@ -53,6 +53,7 @@ const OutlinedInputWrapper = styled(OutlinedInput)(
 
     .MuiOutlinedInput-notchedOutline {
         border: 0;
+        margin-right:15px;
     }
 `
 );
@@ -69,6 +70,7 @@ const IconButtonWrapper = styled(IconButton)(
   ({ theme }) => `
   width: ${theme.spacing(4)};
   height: ${theme.spacing(4)};
+  margin-right:10px;
   border-radius: ${theme.general.borderRadiusLg};
 `
 );

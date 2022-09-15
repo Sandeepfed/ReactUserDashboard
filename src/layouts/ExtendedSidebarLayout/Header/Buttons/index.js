@@ -1,14 +1,15 @@
 import { Box } from '@mui/material';
 import HeaderNotifications from './Notifications';
-import LanguageSwitcher from './LanguageSwitcher';
+//  import HeaderSearch from '../Search/index';
+// import LanguageSwitcher from './LanguageSwitcher';
 import Chat from './Chat';
 
 function HeaderButtons() {
   return (
     <Box>
+      {/* <HeaderSearch /> */}
       <HeaderNotifications />
-      <LanguageSwitcher />
-      <Chat />
+       <Chat /> 
     </Box>
   );
 }

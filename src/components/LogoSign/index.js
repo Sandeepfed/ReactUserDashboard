@@ -1,13 +1,14 @@
+import * as React from 'react';
 import {
-  Tooltip,
-  tooltipClasses,
+
   styled,
-  Grid,
+
   
 } from '@mui/material';
 
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import Grid from '@mui/material/Grid';
+
 
 const LogoWrapper = styled(Link)(
   ({ theme }) => `
@@ -18,6 +19,7 @@ const LogoWrapper = styled(Link)(
         margin: 0 auto;
         justify-content:center;
         font-weight: ${theme.typography.fontWeightBold};
+      
 `
 );
 
@@ -78,40 +80,34 @@ const LogoWrapper = styled(Link)(
 // `
 // );
 
-const TooltipWrapper = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.colors.alpha.trueWhite[100],
-    color: theme.palette.getContrastText(theme.colors.alpha.trueWhite[100]),
-    fontSize: theme.typography.pxToRem(12),
-    fontWeight: 'bold',
-    borderRadius: theme.general.borderRadiusSm,
-    boxShadow:
-      '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)'
-  },
-  [`& .${tooltipClasses.arrow}`]: {
-    color: theme.colors.alpha.trueWhite[100]
-  }
-}));
+// const TooltipWrapper = styled(({ className, ...props }) => (
+//   <Tooltip {...props} classes={{ popper: className }} />
+// ))(({ theme }) => ({
+//   [`& .${tooltipClasses.tooltip}`]: {
+//     backgroundColor: theme.colors.alpha.trueWhite[100],
+//     color: theme.palette.getContrastText(theme.colors.alpha.trueWhite[100]),
+//     fontSize: theme.typography.pxToRem(12),
+//     fontWeight: 'bold',
+//     borderRadius: theme.general.borderRadiusSm,
+//     boxShadow:
+//       '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)'
+//   },
+//   [`& .${tooltipClasses.arrow}`]: {
+//     color: theme.colors.alpha.trueWhite[100]
+//   }
+// }));
 
 
 function Logo() {
-  const { t } = useTranslation();
-  // const theme = useTheme();
-
-
   return (
-    <div className='logo-wrapper'>
-      <Grid aling='center'>
-       <TooltipWrapper title={t('Powercozmo')} arrow>
-      <LogoWrapper to="/overview" >
-       <img  style={{width:"150px", margin: "0 auto"}} src='/static/images/logo/powercozmo.png' alt='logo' />
-      </LogoWrapper>
-    </TooltipWrapper>
+     <Grid container  spacing={4}>
+       <Grid item lg={12}   justifyContent="center">
+        <LogoWrapper to="/overview"  style={{width:"100%", margin: "0 auto 40px",display:"block"}} >
+        <img style={{width:"200px", margin: "0 auto", display:"block"}} src='/static/images/logo/powercozmo.png' alt='logo' />
+        </LogoWrapper>
+      </Grid>
     </Grid>
-    </div> 
-  );
+   );
 }
 
 export default Logo;

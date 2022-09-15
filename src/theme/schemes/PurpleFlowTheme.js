@@ -51,10 +51,10 @@ const colors = {
   },
   layout: {
     general: {
-      bodyBg: '#fff'
+      bodyBg:  themeColors.white,
     },
     sidebar: {
-      background: '#fcfbfc',
+      background: themeColors.white,
       textColor: themeColors.secondary,
       dividerBg: '#f2f5f9',
       menuItemColor: themeColors.black,
@@ -1158,7 +1158,7 @@ export const PurpleFlowTheme = createTheme({
   },
   typography: {
     fontFamily:
-      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+      '"Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     h1: {
       fontWeight: 700,
       fontSize: 35

@@ -48,22 +48,22 @@ const menuItems = [
         ]
       },
       {
-        name: 'Dashboards',
+        name: 'User Dashboards',
         icon: SmartToyTwoToneIcon,
         link: '/bottom-navigation/dashboards',
         items: [
           {
-            name: 'Reports',
+            name: 'Reports 11',
             link: 'dashboards/reports',
             badge: ''
           },
           {
-            name: 'Expenses',
+            name: 'Expenses 111',
             link: 'dashboards/expenses',
             badge: ''
           },
           {
-            name: 'Products',
+            name: 'Products dasdasdhfjsdgvgh',
             link: 'dashboards/products'
           },
           {
